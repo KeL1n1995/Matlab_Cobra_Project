@@ -2,11 +2,11 @@ clear
 model1 = readCbModel('iEC1356_Bl21DE3','fileType','Matlab');
 model=model1;
 % model = readCbModel('iEC1356_Bl21DE3','fileType','SBML');
-%% 读取FASTA文件,获得ID和序列信息
+%% Read the FASTA file to get the ID and sequence information
 [id1,seq1] = fastaread('K5T46.fna');  
 [id2,seq2] = fastaread('ECD_RS.fna');
 [id3,seq3] = fastaread('ECD_000.fna'); 
-%% 切分ID
+%% Segmentation of gene annotation information   
 for i=1:length(id1)
     s=id1{i};
 first_idx = strfind(s, '[locus_tag=');
